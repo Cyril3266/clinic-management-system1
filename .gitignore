@@ -1,0 +1,6 @@
+#ignore virtual eniviornment
+myvenv/
+#ignore pycache 
+__pycache__/
+#ignore migrations
+**/migrations/*.py
