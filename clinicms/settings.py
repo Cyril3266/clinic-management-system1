@@ -31,12 +31,19 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'rest_framework',  # Django REST Framework for API development
+   
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'administrator',  # Custom app for managing roles, staff, doctors, etc.
+    'doctor',  # Custom app for managing doctors and specializations
+    'labtechnician',  # Custom app for managing lab technicians
+    'pharmacist',  # Custom app for managing pharmacists
+    'receptionist',  # Custom app for managing receptionists
 ]
 
 MIDDLEWARE = [
@@ -74,8 +81,12 @@ WSGI_APPLICATION = 'clinicms.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME':  'cmsproject',
+        'USER': 'root',
+        'PASSWORD': 'Cyril@3266',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
 }
 
